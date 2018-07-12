@@ -27,39 +27,7 @@ RUN apt-get update                                                          && \
     rm -rf /var/lib/apt/lists/*
 
 RUN apt-get update                                                          && \
-    sudo apt-get -y install ghc-8.4.3                                       && \
-    rm -rf /var/lib/apt/lists/*
-
-RUN apt-get update                                                          && \
     sudo apt-get -y install ghc-8.2.2                                       && \
-    rm -rf /var/lib/apt/lists/*
-
-RUN apt-get update                                                          && \
-    sudo apt-get -y install ghc-8.0.2                                       && \
-    rm -rf /var/lib/apt/lists/*
-
-RUN apt-get update                                                          && \
-    sudo apt-get -y install ghc-7.10.3                                      && \
-    rm -rf /var/lib/apt/lists/*
-
-RUN apt-get update                                                          && \
-    sudo apt-get -y install ghc-7.8.4                                       && \
-    rm -rf /var/lib/apt/lists/*
-
-RUN apt-get update                                                          && \
-    sudo apt-get -y install ghc-7.6.3                                       && \
-    rm -rf /var/lib/apt/lists/*
-
-RUN apt-get update                                                          && \
-    sudo apt-get -y install ghc-7.4.2                                       && \
-    rm -rf /var/lib/apt/lists/*
-
-RUN apt-get update                                                          && \
-    sudo apt-get -y install ghc-7.2.2                                       && \
-    rm -rf /var/lib/apt/lists/*
-
-RUN apt-get update                                                          && \
-    sudo apt-get -y install ghc-7.0.4                                       && \
     rm -rf /var/lib/apt/lists/*
 
 RUN echo 'export PATH="$PATH:/opt/ghc/bin/"' >> /root/.bashrc
