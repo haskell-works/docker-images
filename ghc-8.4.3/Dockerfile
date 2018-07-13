@@ -26,6 +26,10 @@ RUN apt-get update                                                          && \
     rm -rf /var/lib/apt/lists/*
 
 RUN apt-get update                                                          && \
+    apt-get -y install hpack hspec-discover libyaml-0-2                     && \
+    rm -rf /var/lib/apt/lists/*
+
+RUN apt-get update                                                          && \
     sudo apt-get -y install ghc-8.4.3                                       && \
     rm -rf /var/lib/apt/lists/*
 
