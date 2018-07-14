@@ -14,7 +14,7 @@ RUN apt-get update                                                          && \
     echo Done
 
 RUN apt-get update                                                          && \
-    apt-get -y install locales curl sudo                                    && \
+    apt-get -y install locales curl sudo git                                && \
     rm -rf /var/lib/apt/lists/*
 
 RUN apt-get update                                                          && \
@@ -22,7 +22,7 @@ RUN apt-get update                                                          && \
     rm -rf /var/lib/apt/lists/*
 
 RUN apt-get update                                                          && \
-    sudo apt-get -y install alex-3.1.7 cabal-install-2.2 happy-1.19.5       && \
+    apt-get -y install alex-3.1.7 cabal-install-2.2 happy-1.19.5            && \
     rm -rf /var/lib/apt/lists/*
 
 RUN apt-get update                                                          && \
@@ -30,7 +30,7 @@ RUN apt-get update                                                          && \
     rm -rf /var/lib/apt/lists/*
 
 RUN apt-get update                                                          && \
-    sudo apt-get -y install ghc-8.4.3                                       && \
+    apt-get -y install ghc-8.4.3                                            && \
     rm -rf /var/lib/apt/lists/*
 
 ENV LANG=C.UTF-8 \
