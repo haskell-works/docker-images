@@ -6,23 +6,20 @@ ARG PID1_VERSION=0.1.0.1
 ARG DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update                                                          && \
-    apt-get -y install zip                                                  && \
-    rm -rf /var/lib/apt/lists/*
+    apt-get -y install software-properties-common                           && \
+    add-apt-repository ppa:rael-gc/rvm                                      && \
+    apt-get -y remove --purge software-properties-common                    && \
+    apt-get -y autoremove                                                   && \
+    echo Done
 
 RUN apt-get update                                                          && \
-    apt-get -y install openssl                                              && \
+    apt-get -y install rvm                                                  && \
     rm -rf /var/lib/apt/lists/*
+
+SHELL [ "/bin/bash", "-l", "-c" ]
+
+RUN rvm install jruby
 
 RUN apt-get update                                                          && \
-    apt-get -y install ubuntu-mono                                          && \
+    apt-get -y install vim                                                  && \
     rm -rf /var/lib/apt/lists/*
-
-RUN apt-get update                                                          && \
-    apt-get -y install openjdk-11-jre                                       && \
-    rm -rf /var/lib/apt/lists/*
-
-RUN apt-get update                                                          && \
-    apt-get -y install jruby                                                && \
-    rm -rf /var/lib/apt/lists/*
-
-RUN gem install bundle
