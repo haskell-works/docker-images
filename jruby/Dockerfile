@@ -7,20 +7,22 @@ ARG DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update                                                          && \
     apt-get -y install zip                                                  && \
-    echo Done
+    rm -rf /var/lib/apt/lists/*
 
 RUN apt-get update                                                          && \
     apt-get -y install openssl                                              && \
-    echo Done
+    rm -rf /var/lib/apt/lists/*
 
 RUN apt-get update                                                          && \
     apt-get -y install ubuntu-mono                                          && \
-    echo Done
+    rm -rf /var/lib/apt/lists/*
 
 RUN apt-get update                                                          && \
     apt-get -y install openjdk-11-jre                                       && \
-    echo Done
+    rm -rf /var/lib/apt/lists/*
 
 RUN apt-get update                                                          && \
     apt-get -y install jruby                                                && \
-    echo Done
+    rm -rf /var/lib/apt/lists/*
+
+RUN gem install bundle
