@@ -25,4 +25,4 @@ RUN apt-get update                                                          && \
     apt-get -y install git                                                  && \
     rm -rf /var/lib/apt/lists/*
 
-RUN /bin/bash -l -c "rvm install jruby"
+RUN /bin/bash -l -c "rvm install jruby-1.7"
