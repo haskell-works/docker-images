@@ -19,7 +19,7 @@ RUN apt-get update                                                          && \
     rm -rf /var/lib/apt/lists/*
 
 RUN apt-get update                                                          && \
-    apt-get -y install libstdc++6                                           && \
+    apt-get -y install g++ libstdc++6                                       && \
     rm -rf /var/lib/apt/lists/*
 
 RUN apt-get update                                                          && \

@@ -19,6 +19,10 @@ RUN apt-get update                                                          && \
     rm -rf /var/lib/apt/lists/*
 
 RUN apt-get update                                                          && \
+    apt-get -y install g++ libstdc++6                                       && \
+    rm -rf /var/lib/apt/lists/*
+
+RUN apt-get update                                                          && \
     apt-get -y install libsnappy1v5 libtinfo-dev libsnappy-dev jq           && \
     rm -rf /var/lib/apt/lists/*
 
