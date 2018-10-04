@@ -35,7 +35,7 @@ RUN apt-get update                                                          && \
     rm -rf /var/lib/apt/lists/*
 
 RUN apt-get update                                                          && \
-    apt-get -y install alex-3.1.7 cabal-install-2.2 happy-1.19.5            && \
+    apt-get -y install alex-3.1.7 cabal-install-2.4 happy-1.19.5            && \
     rm -rf /var/lib/apt/lists/*
 
 RUN apt-get update                                                          && \
