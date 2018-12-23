@@ -46,6 +46,10 @@ RUN apt-get update                                                          && \
     apt-get -y install ghc-8.6.3                                            && \
     rm -rf /var/lib/apt/lists/*
 
+RUN apt-get update                                                          && \
+    apt-get -y install zip                                                  && \
+    rm -rf /var/lib/apt/lists/*
+
 ENV LANG=C.UTF-8 \
     LC_ALL=C.UTF-8 \
     PATH=/root/.cabal/bin:/root/.local/bin:/opt/ghc/bin:$PATH

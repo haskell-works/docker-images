@@ -36,7 +36,7 @@ RUN apt-get update                                                          && \
     rm -rf /var/lib/apt/lists/*
 
 RUN apt-get update                                                          && \
-    sudo apt-get -y install alex-3.1.7 cabal-install-2.2 happy-1.19.5       && \
+    sudo apt-get -y install alex-3.1.7 cabal-install-2.4 happy-1.19.5       && \
     rm -rf /var/lib/apt/lists/*
 
 RUN apt-get update                                                          && \
@@ -45,6 +45,10 @@ RUN apt-get update                                                          && \
 
 RUN apt-get update                                                          && \
     sudo apt-get -y install ghc-8.2.2                                       && \
+    rm -rf /var/lib/apt/lists/*
+
+RUN apt-get update                                                          && \
+    apt-get -y install zip                                                  && \
     rm -rf /var/lib/apt/lists/*
 
 RUN echo 'export PATH="$PATH:/opt/ghc/bin/"' >> /root/.bashrc
