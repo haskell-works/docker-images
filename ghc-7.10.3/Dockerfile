@@ -2,7 +2,7 @@ FROM ubuntu:18.04
 
 MAINTAINER John Ky <newhoggy@gmail.com>
 
-ARG GHC_VERSION=8.0.2
+ARG GHC_VERSION=7.10.3
 ARG LTS_SLUG=lts-10.1
 ARG PID1_VERSION=0.1.0.1
 ARG DEBIAN_FRONTEND=noninteractive
@@ -36,7 +36,7 @@ RUN apt-get update                                                          && \
     rm -rf /var/lib/apt/lists/*
 
 RUN apt-get update                                                          && \
-    apt-get -y install alex-3.1.7 cabal-install-2.2 happy-1.19.5            && \
+    apt-get -y install alex-3.1.7 cabal-install-2.4 happy-1.19.5            && \
     rm -rf /var/lib/apt/lists/*
 
 RUN apt-get update                                                          && \
