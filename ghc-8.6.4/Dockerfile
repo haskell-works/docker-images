@@ -2,8 +2,8 @@ FROM ubuntu:18.04
 
 MAINTAINER John Ky <newhoggy@gmail.com>
 
-ARG GHC_VERSION=8.4.4
-ARG LTS_SLUG=lts-12.24
+ARG GHC_VERSION=8.6.4
+ARG LTS_SLUG=lts-10.1
 ARG PID1_VERSION=0.1.0.1
 ARG DEBIAN_FRONTEND=noninteractive
 
@@ -36,7 +36,7 @@ RUN apt-get update                                                          && \
     rm -rf /var/lib/apt/lists/*
 
 RUN apt-get update                                                          && \
-    apt-get -y install alex-3.1.7 cabal-install-2.4 happy-1.19.5            && \
+    apt-get -y install alex-3.2.4 cabal-install-2.4 happy-1.19.9            && \
     rm -rf /var/lib/apt/lists/*
 
 RUN apt-get update                                                          && \
@@ -44,7 +44,7 @@ RUN apt-get update                                                          && \
     rm -rf /var/lib/apt/lists/*
 
 RUN apt-get update                                                          && \
-    apt-get -y install ghc-8.4.4                                            && \
+    apt-get -y install ghc-8.6.3                                            && \
     rm -rf /var/lib/apt/lists/*
 
 RUN apt-get update                                                          && \

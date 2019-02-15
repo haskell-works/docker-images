@@ -56,3 +56,7 @@ ENV LANG=C.UTF-8 \
     PATH=/root/.cabal/bin:/root/.local/bin:/opt/ghc/bin:$PATH
 
 RUN mkdir -p /root/.local/bin
+
+RUN curl -L https://github.com/haskell-works/cabal-plan/releases/download/v0.5.0.0/cabal-plan_x86_64_linux.tar.gz -o cabal-plan_x86_64_linux.tar.gz     && \
+    tar zxvf cabal-plan_x86_64_linux.tar.gz -C /root/.local/bin cabal-plan                                                                              && \
+    rm cabal-plan_x86_64_linux.tar.gz
