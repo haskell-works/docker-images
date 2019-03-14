@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM ubuntu:16.04
 
 MAINTAINER John Ky <newhoggy@gmail.com>
 
@@ -40,7 +40,7 @@ RUN apt-get update                                                          && \
     rm -rf /var/lib/apt/lists/*
 
 RUN apt-get update                                                          && \
-    apt-get -y install hpack hspec-discover libyaml-0-2                     && \
+    apt-get -y install hspec-discover libyaml-0-2                           && \
     rm -rf /var/lib/apt/lists/*
 
 RUN apt-get update                                                          && \
@@ -57,9 +57,9 @@ ENV LANG=C.UTF-8 \
 
 RUN mkdir -p /root/.local/bin
 
-RUN curl -L https://github.com/haskell-works/cabal-plan/releases/download/v0.5.0.0/cabal-plan_x86_64_linux.tar.gz -o cabal-plan_x86_64_linux.tar.gz     && \
-    tar zxvf cabal-plan_x86_64_linux.tar.gz -C /root/.local/bin cabal-plan                                                                              && \
-    rm cabal-plan_x86_64_linux.tar.gz
+RUN curl -L https://github.com/haskell-works/cabal-plan/releases/download/v0.5.0.0/cabal-plan_x86_64_linux_ubuntu-16.04.tar.gz -o cabal-plan_x86_64_linux_ubuntu-16.04.tar.gz   && \
+    tar zxvf cabal-plan_x86_64_linux_ubuntu-16.04.tar.gz -C /root/.local/bin cabal-plan                                                                                         && \
+    rm cabal-plan_x86_64_linux_ubuntu-16.04.tar.gz
 
 RUN apt-get update                                                          && \
     apt-get -y install wget                                                 && \
