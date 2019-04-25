@@ -61,6 +61,6 @@ RUN curl -L https://github.com/haskell-works/cabal-plan/releases/download/v0.5.0
     tar zxvf cabal-plan_x86_64_linux.tar.gz -C /root/.local/bin cabal-plan                                                                              && \
     rm cabal-plan_x86_64_linux.tar.gz
 
-RUN curl -L https://github.com/haskell-works/hw-ci-assist/releases/download/v0.2.0.1/hw-ci-assist_x86_64_linux.tar.gz -o hw-ci-assist_x86_64_linux.tar.gz   && \
+RUN curl -L https://github.com/haskell-works/hw-ci-assist/releases/download/v0.2.0.2/hw-ci-assist_x86_64_linux.tar.gz -o hw-ci-assist_x86_64_linux.tar.gz   && \
     tar zxvf hw-ci-assist_x86_64_linux.tar.gz -C /root/.local/bin ./hw-ci-assist                                                                            && \
     rm hw-ci-assist_x86_64_linux.tar.gz
