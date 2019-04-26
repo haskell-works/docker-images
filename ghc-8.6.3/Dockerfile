@@ -61,6 +61,6 @@ RUN curl -L https://github.com/haskell-works/cabal-plan/releases/download/v0.5.0
     tar zxvf cabal-plan_x86_64_linux.tar.gz -C /root/.local/bin cabal-plan                                                                              && \
     rm cabal-plan_x86_64_linux.tar.gz
 
-RUN curl -L https://github.com/haskell-works/cabal-cache/releases/download/v0.2.0.2/cabal-cache_x86_64_linux.tar.gz -o cabal-cache_x86_64_linux.tar.gz   && \
+RUN curl -L https://github.com/haskell-works/cabal-cache/releases/download/v1.0.0.0/cabal-cache_x86_64_linux.tar.gz -o cabal-cache_x86_64_linux.tar.gz   && \
     tar zxvf cabal-cache_x86_64_linux.tar.gz -C /root/.local/bin ./cabal-cache                                                                            && \
     rm cabal-cache_x86_64_linux.tar.gz
