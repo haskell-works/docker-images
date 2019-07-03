@@ -35,7 +35,7 @@ RUN apt-get update                                                          && \
     rm -rf /var/lib/apt/lists/*
 
 RUN apt-get update                                                          && \
-    apt-get -y install hpack hspec-discover libyaml-0-2                     && \
+    apt-get -y install libyaml-0-2                                          && \
     rm -rf /var/lib/apt/lists/*
 
 RUN apt-get update                                                          && \
